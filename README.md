@@ -11,8 +11,8 @@ This is a console application which moves rovers over a fictitious plateau on Ma
 
 ## Getting Started
 
-#### 1. Install Java 8
-If you don't already have Java 8 installed, grab it from <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>.
+#### 1. Install Java 8 JDK
+If you don't already have Java 8 JDK installed, grab it from <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>.
 
 #### 2. Clone This Repository
 On <https://github.com/anthonynathan/mars-rover-console>, click the green "Clone or Download" button at the top right of the page.
