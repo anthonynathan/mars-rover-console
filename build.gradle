@@ -1,0 +1,41 @@
+group 'za.co.an.threeway'
+version '1.0.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/central' }
+        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/releases' }
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+    testImplementation 'org.junit.platform:junit-platform-suite-api:1.5.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-suite-api:1.5.2'
+    testImplementation 'org.junit.platform:junit-platform-runner:1.5.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-runner:1.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "za.co.an.threeway.MarsRoverRunner"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
