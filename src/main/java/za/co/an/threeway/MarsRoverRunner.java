@@ -25,7 +25,7 @@ public class MarsRoverRunner {
                         Utilities.printInstruction(plateau);
                     }
                 } catch (Exception ex) {
-                    System.err.println("An error has occured: " + ex.getMessage());
+                    System.out.println("An error has occured: " + ex.getMessage());
                     // ex.printStackTrace(); // for debugging only
 
                     System.out.println("");
@@ -36,7 +36,7 @@ public class MarsRoverRunner {
             System.out.println("");
             System.out.println("Goodbye!");
         } else {
-            System.err.println("Please run this application from a console window");
+            System.out.println("Please run this application from a console window");
             System.exit(0);
         }
     }

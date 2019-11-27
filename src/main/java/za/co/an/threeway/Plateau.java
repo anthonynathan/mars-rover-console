@@ -31,7 +31,7 @@ class Plateau {
             topCoordinate.setX(Utilities.parseInteger(consoleInputArray[0]));
             topCoordinate.setY(Utilities.parseInteger(consoleInputArray[1]));
             if (topCoordinate.getX() == 0 || topCoordinate.getY() == 0)
-                System.err.println("The top coordinates cannot contain 0");
+                System.out.println("The top coordinates cannot contain 0");
             System.out.println("");
         } else {
             System.out.println("");
@@ -52,13 +52,13 @@ class Plateau {
                         if (Utilities.validOrientation(consoleInputArray[2]))
                             activeRover.setOrientation(consoleInputArray[2].toUpperCase());
                         else
-                            System.err.println("Please provide a valid orientation, ie N, S, E or W");
+                            System.out.println("Please provide a valid orientation, ie N, S, E or W");
                     } else {
-                        System.err.println(
+                        System.out.println(
                                 "The rover's initial coordinates are outside the boundaries of the plateau. Please select different starting coordinates.");
                     }
                 } else {
-                    System.err.println(
+                    System.out.println(
                             "The rover's initial coordinates are already occupied by another rover. Please select different starting coordinates.");
                 }
             }
@@ -72,7 +72,7 @@ class Plateau {
                 for (String instruction : consoleInputArray) {
                     moveActiveRover(instruction);
                     if (occupiedCoordinates.containsKey(Utilities.generateMapKey(activeRover))) {
-                        System.err.println(String.format(
+                        System.out.println(String.format(
                                 "The rover is trying to enter a position already occupied by another rover, namely (%s %s). Please issue a different instruction.",
                                 activeRover.getXyCoordinate().getX(),
                                 activeRover.getXyCoordinate().getY()));
@@ -84,7 +84,7 @@ class Plateau {
                             activeRover.getXyCoordinate().getX() > topCoordinate.getX() ||
                             activeRover.getXyCoordinate().getY() < 0 ||
                             activeRover.getXyCoordinate().getY() > topCoordinate.getY()) {
-                        System.err.println(String.format(
+                        System.out.println(String.format(
                                 "The rover has moved outside the boundaries of the plateau at (%s %s). Please issue a different instruction.",
                                 activeRover.getXyCoordinate().getX(),
                                 activeRover.getXyCoordinate().getY()));
@@ -105,7 +105,7 @@ class Plateau {
                         .put(Utilities.generateMapKey(activeRover), activeRover);
                 activeRover = new Rover();
             } else {
-                System.err.println("Instructions to the rover can only consist of the letter L R and M");
+                System.out.println("Instructions to the rover can only consist of the letter L R and M");
             }
         }
     }

@@ -6,8 +6,9 @@ build
 # Ignore Gradle GUI config
 gradle-app.setting
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+# Avoid ignoring required jar files (.jar files are usually ignored)
 !gradle-wrapper.jar
+!mars-rover-console-1.0.0-SNAPSHOT.jar
 
 # Cache of project
 .gradletasknamecache

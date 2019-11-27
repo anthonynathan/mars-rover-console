@@ -9,7 +9,7 @@ public class Utilities {
         try {
             integer = Integer.parseInt(strInt);
         } catch (NumberFormatException nfEx) {
-            System.err.println(String.format("%s is not a valid integer", strInt));
+            System.out.println(String.format("%s is not a valid integer", strInt));
             throw nfEx;
         }
 
