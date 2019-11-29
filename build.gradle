@@ -1,12 +1,12 @@
 group 'za.co.an.threeway'
 version '1.0.0-SNAPSHOT'
 
-buildscript {
-    repositories {
-        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/central' }
-        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/releases' }
-    }
-}
+//buildscript {
+//    repositories {
+//        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/central' }
+//        maven { url 'http://dlpbuild01.discsrv.co.za:8081/nexus/content/repositories/releases' }
+//    }
+//}
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
